@@ -1,13 +1,23 @@
 ;--------------------------------------------------------------------------------------
-;;
+;
 ;--------------------------------------------------------------------------------------
 ; NCSU Tropical Dynamics Group
 ; Aiyyer 04/2018
+;--------------------------------------------------------------------------------------
+; Given a 3-D array (p,lat,lon), this code calculate the column average over all levels
+;
+; p must be in hPa
+; for any input variable A the output units are in : = [A] x kg/m^2
+; Example, if input variable is specific humidity in kg/kg, then output is kg/m^2
+;          if input variable is MSE in units of J/kg then output is J/m^2
 ;--------------------------------------------------------------------------------------
 ; Updates: 04/27/2019 in the definition of delP [see below within the code]
 ;-------------------------------------------------------------------------------
 ;--------------------------------------------------------------------------------------
 ;
+;
+;
+;--------------------------------------------------------------------------------------
 undef("column_avg")
 ; does a column average of variables in pressure co-ods
 ; expects 3-D input data with level, lat, lon
